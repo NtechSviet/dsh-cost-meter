@@ -4,6 +4,8 @@ Affiche en direct, dans l'en-tête de chaque session DeepSeek Harness, le nombre
 tokens consommés et le coût de la session en dollars US. Le badge tient compte des
 heures pleines et creuses de l'API DeepSeek.
 
+**Langues :** [Français](README.md) · [English](README.en.md) · [中文](README.zh.md)
+
 ## Ce que vous voyez
 
 - Une capsule discrète dans l'en-tête de session : `$0,023 · 12,4k tok`.
