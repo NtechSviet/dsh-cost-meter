@@ -44,16 +44,6 @@ Désinstallation :
 dsh plugin --profile desktop remove dsh-cost-meter
 ```
 
-## Développement
-
-```sh
-npm install
-npm test
-```
-
-Les tests de tarification tournent avec un faux React, les tests de rendu
-utilisent `jsdom` (`react` et `react-dom` sont des `devDependencies`).
-
 ## Notes
 
 - Le coût est une estimation : chaque nouvelle consommation est tarifée à
