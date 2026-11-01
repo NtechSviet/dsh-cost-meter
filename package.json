@@ -1,0 +1,52 @@
+{
+  "name": "dsh-cost-meter",
+  "version": "1.0.0",
+  "description": "Live DeepSeek token usage and cost per session, with peak / off-peak pricing.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node test/pricing.test.mjs && node test/render.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "license": "MIT",
+  "author": "NtechSviet",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NtechSviet/dsh-cost-meter.git"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "cost",
+    "tokens"
+  ]
+}
